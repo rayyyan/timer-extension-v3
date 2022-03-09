@@ -1,2 +1,1 @@
-Trying manifest v3  
-test commit
+Trying manifest v3
