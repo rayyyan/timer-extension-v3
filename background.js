@@ -9,13 +9,14 @@ chrome.alarms.onAlarm.addListener((alarm) => {
       timer: time + 1,
     })
     //Badge Text
-    chrome.action.setBadgeText(
-      {
-        text: `${time + 1}`,
-      },
-      () => {
-        console.log("done with the badge text")
-      }
-    )
+    chrome.action.setBadgeText({
+      text: `${time + 1}`,
+    })
+    if (time % 1000 == 0) {
+      this.registration.showNotification("Chrome Timer Extensions", {
+        body: "1 second passed",
+        icon: "icons.png",
+      })
+    }
   })
 })
