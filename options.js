@@ -12,6 +12,6 @@ saveBtn.addEventListener("click", () => {
     }
   )
 })
-chrome.storage.sync.get(["name", "test"], (res) => {
+chrome.storage.sync.get(["name"], (res) => {
   nameInput.value = res.name
 })
